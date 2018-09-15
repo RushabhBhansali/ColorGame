@@ -1,4 +1,8 @@
 var colors = [];
+var squares = document.querySelectorAll(".square");
+var colorDisplay =document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message");
+var h1 = document.querySelector("h1");
 
 function randomColorGenerator(){
 	var rNum = Math.floor(Math.random() * 255 + 1);
@@ -7,9 +11,7 @@ function randomColorGenerator(){
 	return "rgb("+rNum+", "+gNum+", "+bNum+")";
 }
 
-var squares = document.querySelectorAll(".square");
-var colorDisplay =document.getElementById("colorDisplay");
-var messageDisplay = document.querySelector("#message");
+
 
 //toDO
 
@@ -30,6 +32,8 @@ for(var i = 0;i<=squares.length-1;i++){
 		if(clickedColor == pickedColor){
 			messageDisplay.textContent = "correct";
 			changeColor(clickedColor);
+			h1.style.backgroundColor = clickedColor;
+
 		}
 		else{
 			this.style.background = "#232323";
