@@ -10,7 +10,15 @@ body{
 	margin: 1.66%;
 }
 
+h1{
+	color: white;
+}
+
 #container{
 	margin: 0 auto;
-	max-width: 1500px;
+	max-width: 600px;
+}
+
+span{
+	color:white;
 }
