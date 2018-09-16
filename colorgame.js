@@ -11,19 +11,8 @@ var modeButtons = document.querySelectorAll(".mode");
 init();
 
 function init(){
-	for(var i = 0; i<modeButtons.length;i++){
-		modeButtons[i].addEventListener("click",function(){
-			modeButtons[0].classList.remove("selected");
-			modeButtons[1].classList.remove("selected");
-			this.classList.add("selected");
-			if(this.textContent === "Easy"){
-				numSquares = 3;
-			} else{
-				numSquares = 6;
-			}
-			reset();
-		});
-	}
+
+	setupModeButtons();
 
 	for(var i = 0; i < squares.length; i++){
 	// add initial colors to square
@@ -47,6 +36,22 @@ function init(){
 
 	reset();
 
+}
+
+function setupModeButtons(){
+	for(var i = 0; i<modeButtons.length;i++){
+		modeButtons[i].addEventListener("click",function(){
+			modeButtons[0].classList.remove("selected");
+			modeButtons[1].classList.remove("selected");
+			this.classList.add("selected");
+			if(this.textContent === "Easy"){
+				numSquares = 3;
+			} else{
+				numSquares = 6;
+			}
+			reset();
+		});
+	}
 }
 
 
